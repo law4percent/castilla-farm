@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Castilla Farm - Fresh from Nature</title>
+
+  <link rel="stylesheet" href="styles.css">
+   <!-- Tab Icon (Favicon) -->
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/gM0CjpLF/logo-PNG.png">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/gM0CjpLF/logo-PNG.png">
+</head>
+<body>
+  <div class="bg-animation"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="copyNotification" class="copy-notification">
+    📋 Order copied to clipboard!
+  </div>
+
+  <div id="screenshotNotification" class="screenshot-notification">
+    📸 Screenshot saved!
+  </div>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <div class="hero-content">
+      <img src="https://i.ibb.co/gM0CjpLF/logo-PNG.png" alt="Castilla Farm Logo" class="logo">
+      <h1 class="hero-title">Castilla Farm</h1>
+      <p class="hero-subtitle">Fresh produce directly from our farm to your table</p>
+      <a href="#products" class="cta-button">Explore Our Products</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-header fade-in">
+      <h2 class="section-title">About Our Farm</h2>
+      <p class="section-subtitle">Cultivating excellence with sustainable farming practices since 2016</p>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text slide-in-left">
+        <p>Nestled in the heart of Brgy. Bog-o, Asturias, Cebu, Castilla Farm stands as a testament to sustainable agriculture and community dedication. We specialize in producing premium coconuts, exotic dragonfruit, fresh bananas, and quality corn using environmentally conscious farming methods.</p>
+        
+        <p>Our mission extends beyond cultivation – we're committed to bridging the gap between local farmers and conscious consumers while promoting eco-friendly agricultural practices that benefit our community and environment.</p>
+        
+        <button class="history-button" onclick="toggleHistory()">Discover Our Story</button>
+        
+        <div id="historyText" class="history-text">
+          <p>Our journey began in 2016 with a simple vision: to create a sustainable farming operation that would serve our community for generations. Starting with modest corn and banana crops alongside poultry, we've grown into a diverse agricultural enterprise. Today, we're proud to offer coconuts, dragon fruits, and other premium crops, all while maintaining our commitment to quality and sustainability.</p>
+        </div>
+      </div>
+
+      <div class="map-container slide-in-right">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.5163962490055!2d123.71258606828206!3d10.62224466557988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a975e25e007a33%3A0xd80a0f123b649964!2sBog-o%2C%20Asturias%2C%20Cebu!5e0!3m2!1sen!2sph!4v1715930241761!5m2!1sen!2sph" 
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <div class="section-header fade-in">
+      <h2 class="section-title">Fresh from Our Farm</h2>
+      <p class="section-subtitle">Premium quality produce grown with care and harvested at peak freshness</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card fade-in">
+        <img src="https://img.freepik.com/free-photo/coconut-fruit_1203-2413.jpg" alt="Young Coconut" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">Young Coconut</h3>
+          <p class="product-price">₱7 per piece</p>
+        </div>
+      </div>
+
+      <div class="product-card fade-in">
+        <img src="https://draxe.com/wp-content/uploads/2019/12/DrAxeDragonFruitHeader-768x350.jpg" alt="Dragonfruit" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">Dragon Fruit</h3>
+          <p class="product-price">₱120 per kg</p>
+        </div>
+      </div>
+
+      <div class="product-card fade-in">
+        <img src="https://cdn.wikifarmer.com/images/thumbnail/2023/04/Banana-Crop-History-Nutritional-Value-and-Health-Benefits-500x500.jpg" alt="Banana" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">Fresh Banana</h3>
+          <p class="product-price">₱75 per kg</p>
+        </div>
+      </div>
+
+      <div class="product-card fade-in">
+        <img src="https://www.foodrepublic.com/img/gallery/corn-is-a-fruit-but-its-also-a-grain-and-a-vegetable/intro-1688390573.sm.webp" alt="Corn" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">Corn Meal</h3>
+          <p class="product-price">₱1,500 per sack</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-section fade-in">
+      <div class="section-header">
+        <h3 class="section-title" style="font-size: 2rem;">Place Your Order</h3>
+        <p class="section-subtitle">Select your desired quantities and we'll prepare your fresh order</p>
+      </div>
+
+      <form id="orderForm" class="order-form">
+        <div class="form-group">
+          <label for="coconut">Young Coconut (pieces)</label>
+          <input type="number" id="coconut" name="coconut" min="0" value="0">
+        </div>
+
+        <div class="form-group">
+          <label for="dragonfruit">Dragon Fruit (kg)</label>
+          <input type="number" id="dragonfruit" name="dragonfruit" min="0" value="0">
+        </div>
+
+        <div class="form-group">
+          <label for="banana">Fresh Banana (kg)</label>
+          <input type="number" id="banana" name="banana" min="0" value="0">
+        </div>
+
+        <div class="form-group">
+          <label for="corn">Corn Meal (sacks)</label>
+          <input type="number" id="corn" name="corn" min="0" value="0">
+        </div>
+      </form>
+
+      <button type="button" class="order-button" onclick="submitOrder()">Calculate Total & Order</button>
+
+      <div id="confirmationBox" class="confirmation-box">
+        <div id="orderSummary"></div>
+                <!-- 4. ADD COPY BUTTON TO CONFIRM BUTTONS (in the confirmation box) -->
+        <div class="confirm-buttons">
+          <button onclick="copyOrderToClipboard()" class="confirm-btn copy">📋 Copy Order</button>
+          <button onclick="takeScreenshot()" class="confirm-btn screenshot">📸 Screenshot</button>
+          <button onclick="confirmOrder()" class="confirm-btn primary">Confirm Order</button>
+          <button onclick="cancelOrder()" class="confirm-btn secondary">Cancel</button>
+        </div>
+      </div>
+
+      <p id="finalConfirmation" style="color: var(--light-green); font-weight: bold; margin-top: 20px; text-align: center;"></p>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback">
+    <div class="section-header fade-in">
+      <h2 class="section-title">We Value Your Feedback</h2>
+      <p class="section-subtitle">Share your thoughts, suggestions, or questions with us</p>
+    </div>
+
+    <form id="feedbackForm" class="feedback-form fade-in">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      
+      <p style="margin-bottom: 20px; color: var(--accent-green); font-size: 0.9rem;">
+        Note: You'll be redirected to our messenger after submitting. Your feedback will be automatically copied for easy pasting.
+      </p>
+      
+      <button type="submit" class="submit-btn">Send Feedback</button>
+    </form>
+
+    <p id="feedbackResponse" style="color: var(--light-green); font-weight: bold; margin-top: 20px; text-align: center;"></p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-header fade-in">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Ready to place an order or have questions? We're here to help!</p>
+    </div>
+
+    <div class="contact-info">
+      <div class="contact-card fade-in">
+        <div class="contact-icon">📍</div>
+        <h3>Location</h3>
+        <p>Brgy. Bog-o, Asturias, Cebu</p>
+      </div>
+
+      <div class="contact-card fade-in">
+        <div class="contact-icon">📞</div>
+        <h3>Phone</h3>
+        <p>09561558776</p>
+      </div>
+
+      <div class="contact-card fade-in">
+        <div class="contact-icon">✉️</div>
+        <h3>Email</h3>
+        <p><a href="mailto:delfa.castilla@gws.ctu.edu.ph">delfa.castilla@gws.ctu.edu.ph</a></p>
+      </div>
+
+      <div class="contact-card fade-in">
+        <div class="contact-icon">📱</div>
+        <h3>Facebook</h3>
+        <p><a href="https://www.facebook.com/delfa.castilla" target="_blank">Delfa Castilla</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2025 Castilla Farm. All rights reserved. | Cultivating Excellence Since 2016</p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
